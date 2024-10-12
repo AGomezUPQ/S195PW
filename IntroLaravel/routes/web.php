@@ -5,7 +5,7 @@ use App\Http\Controllers\ControladorVistas;
 
 Route::get('/',[ControladorVistas::class,'home'])->name('rutainicio');
 Route::get('/formulario',[ControladorVistas::class,'formulario'])->name('rutaformulario');
-Route::get('/clientes',[ControladorVistas::class,'clientes'])->name('rutaclientes');
+Route::get('/clientes',[ControladorVistas::class,'consulta'])->name('rutaclientes');
 Route::get('/componentes',[ControladorVistas::class,'componentes'])->name('rutacomponentes');
 
 
