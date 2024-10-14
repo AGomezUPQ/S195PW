@@ -8,6 +8,8 @@ Route::get('/formulario',[ControladorVistas::class,'formulario'])->name('rutafor
 Route::get('/clientes',[ControladorVistas::class,'consulta'])->name('rutaclientes');
 Route::get('/componentes',[ControladorVistas::class,'componentes'])->name('rutacomponentes');
 
+Route::post('/enviar',[ControladorVistas::class,'procesarCliente'])->name('procesar');
+
 
 
 
