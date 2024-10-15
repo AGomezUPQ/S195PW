@@ -14,13 +14,31 @@ class ControladorVistas extends Controller
     {
         return view('formulario');
     }
+    public function componentes()
+    {
+        return view('componentes');
+    }
     public function consulta()
     {
         return view('clientes');
     }
     public function procesarCliente()
+    //public function procesarCliente(Request $peticion)
     {
         return 'Llego tu formulario al controlador';
+
+        //Imprimimos todo lo que viene en la peticion
+        //return $peticion->all();
+
+        //Imprime la ruta completa de la peticion
+        //return $peticion->path();
+
+        //imprime la url completa de la peticion
+        //return $peticion->url();
+
+        //imprime la ip de la peticion
+        //return $peticion->ip();
+
     }
 
 }
