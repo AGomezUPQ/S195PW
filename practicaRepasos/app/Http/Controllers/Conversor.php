@@ -18,13 +18,13 @@ class Conversor extends Controller
             $Conversion = $request->input('conversion');
 
             if($Conversion == 'megabyte_a_gigabyte'){
-                $resultado = $input . 'megabyte = ' . ($input / 1000) . 'gigabyte';
+                $resultado = $input . 'megabyte = ' . ($input / 1024) . 'gigabyte';
             }elseif($Conversion == 'gigabyte_a_megabyte'){
-                $resultado = $input . 'gigabyte = ' . ($input * 1000) . 'megabyte';
+                $resultado = $input . 'gigabyte = ' . ($input * 1024) . 'megabyte';
             }elseif($Conversion == 'gigabyte_a_terabyte'){
-                $resultado = $input . 'gigabyte = ' . ($input / 1000) . 'terabyte';
+                $resultado = $input . 'gigabyte = ' . ($input / 1024) . 'terabyte';
             }elseif($Conversion == 'terabyte_a_gigabyte'){
-                $resultado = $input . 'terabyte = ' . ($input * 1000 ) . 'gibabyte';
+                $resultado = $input . 'terabyte = ' . ($input * 1024 ) . 'gibabyte';
             }else{
                 $resultado = 'Pide conversion valida';
             }
