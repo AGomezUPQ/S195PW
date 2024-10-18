@@ -14,13 +14,34 @@
 
 
     <div class="card text-center">
-  <div class="card-title">
-    Repaso 1
+  
+    <div class="card-title">
+    <h5 class="card-title" >Repaso 1 </h5>
   </div>
+  
   <div class="card-body">
     <h5 class="card-title">Conversor de unidades</h5>
-    <p class="card-text">With supporting text below as a natural lead-in to additional content.</p>
-    <a href="#" class="btn btn-primary">Go somewhere</a>
+
+    <form action="{{ route('rutaRepaso1') }}" method="POST">
+        @csrf
+        <label for="valor">Ingrese el valor:</label>
+        <input type="number" name="valor" id="valor" required>
+        
+        <label for="conversion">Seleccione la conversión:</label>
+        <select name="conversion" id="conversion">
+            <option value="megabyte_a_gigabyte">MB a GB</option>
+            <option value="gigabyte_a_megabyte">GB a MB</option>
+            <option value="gigabyte_a_terabyte">GB a TB</option>
+            <option value="terabyte_a_gigabyte">TB a GB</option>
+        </select>
+        <button type="submit" class="btn btn-primary btn-start">Convertir</button>
+    </form>
+
+    @if (isset($resultado))
+        <h2>Resultado: {{ $resultado }}</h2>
+    @endif
+
+    
   </div>
 
 </div>

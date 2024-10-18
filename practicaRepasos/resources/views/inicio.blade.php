@@ -18,6 +18,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Datos de contacto</h5>
                         <p class="card-text">Gomez Utrera Jose Alberto</p>
+                        <p class="card-text">Ingeniería en Sistemas Computacionales</p>
                         <p class="card-text">Grupo: S195</p>
                         <p class="card-text"></p>
                         <a href="{{ route('rutaRepaso1') }}" class="btn btn-primary">Ir al Repaso 1</a>
