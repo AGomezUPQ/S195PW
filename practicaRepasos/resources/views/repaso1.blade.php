@@ -25,7 +25,7 @@
     <form action="{{ route('rutaRepaso1') }}" method="POST">
         @csrf
         <label for="valor">Ingrese el valor:</label>
-        <input type="number" name="valor" id="valor" required>
+        <input type="float" name="valor" id="valor" required>
         
         <label for="conversion">Seleccione la conversión:</label>
         <select name="conversion" id="conversion">
