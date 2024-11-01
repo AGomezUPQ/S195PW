@@ -8,5 +8,4 @@ use App\Http\Controllers\ControlarVistas;
 Route::get('/',[ControlarVistas::class,'home'])->name('rutainicio');
 Route::get('/formulario',[ControlarVistas::class,'formulario'])->name('rutaformulario');
 
-
-
+Route::post('/enviar',[ControlarVistas::class,'procesarCliente'])->name('procesar');

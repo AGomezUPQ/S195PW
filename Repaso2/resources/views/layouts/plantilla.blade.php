@@ -3,6 +3,15 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- JavaScript -->
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/alertify.min.js"></script>
+    <!-- CSS -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/alertify.min.css"/>
+    <!-- Default theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/default.min.css"/>
+    <!-- Bootstrap theme -->
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.14.0/build/css/themes/bootstrap.min.css"/>
+
     @vite(['resources/js/app.js'])
 
  <style>
@@ -58,7 +67,7 @@ footer {
   <footer class="bg-body-tertiary text-center text-lg-start" data-bs-theme="dark">
     <div class="text-center p-3" style="background-color:rgba(255, 99, 71, 0.6);">
       © 30 de Octubre del 2024 Copyright:
-      <a class="text-body" href="#">Bibliotecas el Alquimista</a>
+      <a class="text-body"  href="{{ route('rutainicio') }}">Bibliotecas el Alquimista</a>
     </div>
     </footer>
 </div>

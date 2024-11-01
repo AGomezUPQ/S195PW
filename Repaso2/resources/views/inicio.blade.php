@@ -20,8 +20,7 @@
       <div class="card mb-3">
       
 
-      <img src="{{ asset('./storage/imagenes/calaverita.jpg') }}" alt="Mi imagen">
-      <img src="{{ asset('public/storage/calaverita.jpg') }}" alt="Descripción de la imagen">
+      <img src="{{ asset('./storage/imagenes/calaverita.jpg') }}" alt="Calaverita">
         <div class="card-body">
           <h5 class="card-title">Noticia Literaria</h5>
           <p class="card-text">
@@ -39,6 +38,8 @@
     </div>
   </div>
 </div>
+
+
 
 
 @endsection
