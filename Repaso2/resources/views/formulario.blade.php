@@ -45,34 +45,38 @@ alertify.success('{{ session('exito') }}');
                 <label class="form-label">ISBN</label>
                 <input type="text" class="form-control" name="txtISBN" required pattern="\d{13}" placeholder="1234567891234">
                 <small class="text-danger fst-italic"> {{ $errors->first('txtISBN') }}</small>
-              </div>
+                </div>
               <div class="form-group">
                 <label class="form-label">Titulo</label>
                 <input type="text" class="form-control" name="txtTitulo" placeholder="Titulo">
                 <small class="text-danger fst-italic">{{ $errors->first('txtTitulo') }}</small>
                 </div>
                 </div>  
-            
 
             <div class="form-group">
               <label class="form-label" for="inputAddress">Autor</label>
               <input type="text" class="form-control" name="txtAutor" placeholder="Autor...">
+              <small class="text-danger fst-italic">{{ $errors->first('txtAutor') }}</small>
             </div>
             <div class="form-group">
               <label class="form-label" for="inputAddress2">Páginas</label>
               <input type="number" class="form-control" name="txtPaginas" placeholder="Páginas">
+              <small class="text-danger fst-italic">{{ $errors->first('txtPaginas') }}</small>
             </div>
             <div class="form-group">
               <label class="form-label" for="inputAddress2">Año</label>
               <input type="number" class="form-control" name="txtYear" placeholder="Año">
+              <small class="text-danger fst-italic">{{ $errors->first('txtYear') }}</small>
             </div>
             <div class="form-group">
               <label class="form-label" for="inputAddress2">Editorial</label>
               <input type="text" class="form-control" name="txtEditorial" placeholder="Editorial">
+              <small class="text-danger fst-italic">{{ $errors->first('txtEditorial') }}</small>
             </div>
             <div class="form-group">
               <label class="form-label" for="inputAddress2">Email Editorial</label>
               <input type="email" class="form-control" name="txtEmail" placeholder="Email Editorial">
+              <small class="text-danger fst-italic">{{ $errors->first('txtEmail') }}</small>
             </div>
             <button type="submit" class="btn btn-primary">Registro de libros</button>
           </form>

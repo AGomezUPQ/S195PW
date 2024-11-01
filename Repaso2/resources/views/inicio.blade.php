@@ -9,7 +9,6 @@
             align-items: center;
             height: 100vh;
         }
-        /* Agrega aquí otros estilos si los tienes */
     </style>
 </head>
 
@@ -18,8 +17,6 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card mb-3">
-      
-
       <img src="{{ asset('./storage/imagenes/calaverita.jpg') }}" alt="Calaverita">
         <div class="card-body">
           <h5 class="card-title">Noticia Literaria</h5>
