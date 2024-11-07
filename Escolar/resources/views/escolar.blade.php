@@ -13,24 +13,30 @@
     Utiles Escolares
 </div>
 
-<h5>
+@if (session('exito'))
+<h5> {{ session('exito') }} </h5>
+@endif    
 
 <card>
-    <form>
+    <form action="/enviar" method="POST">
+    @csrf()    
         <div>
             <label> Nombre: </label>
-            <input type="text" name="txtNombre" id="txtNombre"> Ingresa el nombre</input>
-            
+            <input type="text" name="txtNombre" id="txtNombre" placeholder="Ingresa el nombre"> </input>
+            <small class="text-danger fst-italic"> {{ $errors->first('txtNombre') }}</small>
         </div>            
         <div>
             <label> Marca: </label>
-            <input input type="text" name="txtMarca" id="txtMarca"> Ingresa la marca</input>
+            <input input type="text" name="txtMarca" id="txtMarca" placeholder="Ingresa la marca"> </input>
+            <small class="text-danger fst-italic"> {{ $errors->first('txtMarca') }}</small>
         </div>    
         <div>
             <label> Cantidad: </label>
-            <input input type="text" name="txtMarca" id="txtMarca"> Ingresa la cantidad</input>
+            <input input type="number" name="txtCantidad" id="txtCantidad" placeholder="Ingresa la cantidad"> </input>
+            <small class="text-danger fst-italic"> {{ $errors->first('txtMarca') }}</small>
         </div>        
-
+        
+        <button type="submit" class="btn btn-primary">Registro de Uiles</button>
 
 
         

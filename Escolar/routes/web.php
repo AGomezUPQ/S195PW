@@ -6,7 +6,7 @@ use App\Http\Controllers\GuardarUtiles;
 
 
 Route::get('/', [GuardarUtiles::class, 'formUtiles'])->name('escolar');
-Route::post('/enviar', [GuardarUtiles::class, 'SalvarUtiles']);
+Route::post('/enviar',[GuardarUtiles::class,'SalvarUtiles'])->name('procesar');
 
 /* 
 Route::get('/', function () {
