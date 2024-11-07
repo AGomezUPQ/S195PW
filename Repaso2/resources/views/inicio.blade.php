@@ -17,7 +17,7 @@
   <div class="row justify-content-center">
     <div class="col-md-8">
       <div class="card mb-3">
-      <img src="{{ asset('./storage/imagenes/calaverita.jpg') }}" alt="Calaverita">
+       <img src="{{ asset('img/calaverita.jpg')}}" class="h-5 w-5" alt="turista Logo"> 
         <div class="card-body">
           <h5 class="card-title">Noticia Literaria</h5>
           <p class="card-text">
