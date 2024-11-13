@@ -4,7 +4,7 @@ namespace Database\Seeders;
 
 use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
-use Illuminate\Database\migrations\2024_11_12_002600_create_clientes_table;
+use Illuminate\Support\Facades\DB;
 
 
 class ClienteTableSeeder extends Seeder
