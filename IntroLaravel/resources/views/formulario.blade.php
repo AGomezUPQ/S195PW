@@ -56,11 +56,13 @@
                 {{ __('Registro clientes') }}
             </div>
             <div class="card-body text-justify">
-                <form action="/enviar" method="POST" >
+                <!-- <form action="/enviar" method="POST" > -->
+                <form action="{{ route('procesar') }}" method="POST" >    
                 @csrf()
                     <div class="mb-3">
                         <label for="nombre" class="form-label">{{ __('Nombre:') }}</label>
-                        <input type="text" class="form-control" name="txtnombre">
+                        <!-- <input type="text" class="form-control" name="txtnombre"> -->
+                        <input type="text" class="form-control" name="txtnombre" >
                         <small class="text-danger fst-italic"> {{ $errors->first('txtnombre') }}</small>
                     </div>
                     <div class="mb-3">
