@@ -19,6 +19,8 @@ Route::get('/',[clienteController::class,'home'])->name('rutainicio');
 Route::get('/cliente/create',[clienteController::class,'create'])->name('rutaformulario');
 Route::post('/cliente',[clienteController::class,'store'])->name('procesar');
 Route::get('/cliente',[clienteController::class,'index'])->name('rutaclientes');
+Route::put('/cliente/{id}',[clienteController::class,'update'])->name('rutamodificar');
+Route::delete('/cliente/{id}',[clienteController::class,'destroy'])->name('rutaeliminar');
 
 
 //MANEJO ANTIGUO DE VISTAS

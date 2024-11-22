@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use App\Http\Requests\validadorCliente;
 use Illuminate\Support\Facades\DB;
 use Carbon\Carbon;
+use COM;
 
 class clienteController extends Controller
 {
@@ -14,6 +15,7 @@ class clienteController extends Controller
     {
         return view('inicio');
     }
+
 
     /**
      * Display a listing of the resource.
@@ -69,15 +71,26 @@ class clienteController extends Controller
      */
     public function edit(string $id)
     {
-        //
+        
     }
 
     /**
      * Update the specified resource in storage.
      */
-    public function update(Request $request, string $id)
+    public function update(validadorCliente $request, string $id)
     {
-        //
+        DB::table('clientes')
+        ->where('id', $id)
+        ->update([
+            'nombre'=> $request->input('txtnombre'),
+            'apellido'=> $request->input('txtapellido'),
+            'correo'=> $request->input('txtcorreo'),
+            'telefono'=> $request->input('txttelefono'),
+            'updated_at'=> Carbon::now(),
+        ]);
+
+        session()->Flash('Actualizar', 'Datos actualizados exitosamente');
+        return to_route('rutaclientes');
     }
 
     /**
@@ -85,6 +98,11 @@ class clienteController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        DB::table('clientes')
+        ->where('id', $id)
+        ->delete();
+
+        session()->Flash('Eliminar', 'Cliente Eliminado correctamente');
+        return to_route('rutaclientes');
     }
 }
